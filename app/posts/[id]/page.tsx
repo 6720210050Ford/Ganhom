@@ -3,6 +3,12 @@ import type { Metadata, ResolvingMetadata } from 'next';
 type Props = {
     params: { id: string };
 };
+type Post = {
+    id: number;
+    userId: number;
+    title: string;
+    body: string;
+};
 export async function generateMetadata(
     { params }: Props,
     parent: ResolvingMetadata
@@ -17,6 +23,7 @@ export async function generateMetadata(
     };
 }
 export default async function PostDetail({ params }: Props) {
+    
     const res = await fetch(
         `https://jsonplaceholder.typicode.com/posts/${params.id}`,
         { cache: 'no-store' }

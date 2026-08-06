@@ -6,6 +6,7 @@ interface ErrorProps {
     reset: () => void;
 }
 export default function ErrorPage({ error, reset }: ErrorProps) {
+    
     return (
         <main className="p-12 text-center">
             <div className="p-8 bg-red-50 rounded-xl border border-red-200 max-w-md mx-auto">
