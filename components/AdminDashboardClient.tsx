@@ -1104,7 +1104,7 @@ export default function AdminDashboardClient({
                         src={s.imageUrl}
                         alt={s.alt || 'Slide image'}
                         style={{
-                          objectFit: s.imageFit || 'cover',
+                          objectFit: (s.imageFit === 'blur' ? 'cover' : s.imageFit || 'cover') as any,
                           objectPosition: `${s.imageOffsetX ?? 50}% ${s.imageOffsetY ?? 50}%`,
                           transform: s.imageZoom && s.imageZoom !== 100 ? `scale(${s.imageZoom / 100})` : undefined,
                           transformOrigin: `${s.imageOffsetX ?? 50}% ${s.imageOffsetY ?? 50}%`,
