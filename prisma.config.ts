@@ -6,6 +6,7 @@ import { defineConfig } from 'prisma/config';
 config();
 
 export default defineConfig({
+  // @ts-ignore
   earlyAccess: true,
   schema: path.join(__dirname, 'prisma', 'schema.prisma'),
   datasource: {
