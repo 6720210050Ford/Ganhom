@@ -57,7 +57,7 @@ export default function AdminProducts({ onOpenAddModal }: AdminProductsProps) {
   const [formDescription, setFormDescription] = useState('');
   const [formMedia, setFormMedia] = useState<string[]>([]);
   const [mediaInputUrl, setMediaInputUrl] = useState('');
-  const [formCategory, setFormCategory] = useState('เสื้อผ้า & เครื่องแต่งกาย');
+  const [formCategory, setFormCategory] = useState('Fragrance Oils');
   const [formPrice, setFormPrice] = useState('0.00');
   const [formCompareAtPrice, setFormCompareAtPrice] = useState('');
   const [formCostPerItem, setFormCostPerItem] = useState('');
@@ -83,7 +83,7 @@ export default function AdminProducts({ onOpenAddModal }: AdminProductsProps) {
 
   const [formStatus, setFormStatus] = useState<'active' | 'draft'>('active');
   const [formProductType, setFormProductType] = useState('ไม่มี');
-  const [formVendor, setFormVendor] = useState('CHANEL Lifestyle');
+  const [formVendor, setFormVendor] = useState('PerfumeDom');
   const [formCollections, setFormCollections] = useState<string[]>([]);
   const [collectionInput, setCollectionInput] = useState('');
   const [showCollectionInput, setShowCollectionInput] = useState(false);
@@ -129,7 +129,7 @@ export default function AdminProducts({ onOpenAddModal }: AdminProductsProps) {
     setFormDescription('');
     setFormMedia([]);
     setMediaInputUrl('');
-    setFormCategory('เสื้อผ้า & เครื่องแต่งกาย');
+    setFormCategory('Fragrance Oils');
     setFormPrice('0.00');
     setFormCompareAtPrice('');
     setFormCostPerItem('');
@@ -145,7 +145,7 @@ export default function AdminProducts({ onOpenAddModal }: AdminProductsProps) {
     setFormVariants([]);
     setFormStatus('active');
     setFormProductType('ไม่มี');
-    setFormVendor('CHANEL Lifestyle');
+    setFormVendor('PerfumeDom');
     setFormCollections([]);
     setFormTags([]);
     setFormThemeTemplate('สินค้าเริ่มต้น');
@@ -162,7 +162,7 @@ export default function AdminProducts({ onOpenAddModal }: AdminProductsProps) {
     setFormDescription(p.description || '');
     setFormMedia(p.media || []);
     setMediaInputUrl('');
-    setFormCategory(p.category || 'เสื้อผ้า & เครื่องแต่งกาย');
+    setFormCategory(p.category || 'Fragrance Oils');
     setFormPrice(String(p.price || '0.00'));
     setFormCompareAtPrice(p.compareAtPrice ? String(p.compareAtPrice) : '');
     setFormCostPerItem(p.costPerItem ? String(p.costPerItem) : '');
@@ -751,12 +751,11 @@ export default function AdminProducts({ onOpenAddModal }: AdminProductsProps) {
               onChange={(e) => setFormCategory(e.target.value)}
               className="w-full px-3.5 py-2.5 rounded-xl border border-neutral-300 focus:border-black focus:outline-none text-xs bg-white cursor-pointer"
             >
-              <option value="เสื้อผ้า & เครื่องแต่งกาย">เสื้อผ้า & เครื่องแต่งกาย</option>
-              <option value="กระเป๋า & เครื่องหนัง">กระเป๋า & เครื่องหนัง</option>
-              <option value="น้ำหอม & ความงาม">น้ำหอม & ความงาม</option>
-              <option value="เครื่องประดับ & แว่นตา">เครื่องประดับ & แว่นตา</option>
-              <option value="รองเท้า & สนีกเกอร์">รองเท้า & สนีกเกอร์</option>
-              <option value="สมาร์ทโฮม & อุปกรณ์เสริม">สมาร์ทโฮม & อุปกรณ์เสริม</option>
+              <option value="Fragrance Oils">Fragrance Oils</option>
+              <option value="Essential Oils">Essential Oils</option>
+              <option value="Candle Supplies">Candle Supplies</option>
+              <option value="Soap Making">Soap Making</option>
+              <option value="Accessories">Accessories</option>
             </select>
           </div>
 
@@ -1102,7 +1101,7 @@ export default function AdminProducts({ onOpenAddModal }: AdminProductsProps) {
                 type="text"
                 value={formProductType}
                 onChange={(e) => setFormProductType(e.target.value)}
-                placeholder="เช่น เสื้อผ้า, เครื่องหนัง"
+                placeholder="เช่น Fragrance Oils, Essential Oils"
                 className="w-full px-3 py-2 text-xs rounded-xl border border-neutral-300 focus:border-black focus:outline-none"
               />
             </div>
@@ -1114,7 +1113,7 @@ export default function AdminProducts({ onOpenAddModal }: AdminProductsProps) {
                 type="text"
                 value={formVendor}
                 onChange={(e) => setFormVendor(e.target.value)}
-                placeholder="เช่น CHANEL Lifestyle"
+                placeholder="เช่น PerfumeDom"
                 className="w-full px-3 py-2 text-xs rounded-xl border border-neutral-300 focus:border-black focus:outline-none"
               />
             </div>

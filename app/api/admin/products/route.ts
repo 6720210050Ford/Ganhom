@@ -57,7 +57,7 @@ export async function POST(req: NextRequest) {
       title: body.title,
       description: body.description || '',
       media: Array.isArray(body.media) ? body.media : body.media ? [body.media] : [],
-      category: body.category || 'เสื้อผ้า & เครื่องแต่งกาย',
+      category: body.category || 'Fragrance Oils',
       price: Number(body.price) || 0,
       compareAtPrice: body.compareAtPrice ? Number(body.compareAtPrice) : undefined,
       costPerItem: body.costPerItem ? Number(body.costPerItem) : undefined,

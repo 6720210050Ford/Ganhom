@@ -14,7 +14,7 @@ export async function GET() {
       },
     });
 
-    const users = dbUsers.map((u) => ({
+    const users = dbUsers.map((u: { id: string; email: string }) => ({
       id: u.id,
       email: u.email,
       role: u.email === 'admin@tsu.ac.th' ? 'ADMINISTRATOR' : 'USER',

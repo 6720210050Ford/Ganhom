@@ -49,11 +49,11 @@ export default function ProductsPage() {
 
   const categories = [
     { id: 'all', label: 'ทั้งหมด' },
-    { id: 'เสื้อผ้า & เครื่องแต่งกาย', label: 'เสื้อผ้า & เครื่องแต่งกาย' },
-    { id: 'กระเป๋า & เครื่องหนัง', label: 'กระเป๋า & เครื่องหนัง' },
-    { id: 'น้ำหอม & ความงาม', label: 'น้ำหอม & ความงาม' },
-    { id: 'เครื่องประดับ & แว่นตา', label: 'เครื่องประดับ & แว่นตา' },
-    { id: 'รองเท้า & สนีกเกอร์', label: 'รองเท้า & สนีกเกอร์' },
+    { id: 'Fragrance Oils', label: 'Fragrance Oils' },
+    { id: 'Essential Oils', label: 'Essential Oils' },
+    { id: 'Candle Supplies', label: 'Candle Supplies' },
+    { id: 'Soap Making', label: 'Soap Making' },
+    { id: 'Accessories', label: 'Accessories' },
   ];
 
   const filteredProducts = products.filter((p) => {
@@ -92,13 +92,13 @@ export default function ProductsPage() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-10 pb-6">
         <div className="text-center max-w-2xl mx-auto space-y-2">
           <span className="text-[11px] font-black uppercase tracking-[0.2em] text-neutral-500">
-            Modern Lifestyle Curated Collection
+            Premium Fragrance Oils Collection
           </span>
           <h1 className="text-3xl sm:text-4xl font-black tracking-tight text-neutral-900 font-serif">
-            คอลเลกชันสินค้าระดับพรีเมียม
+            คอลเลกชันน้ำหอมระดับพรีเมียม
           </h1>
           <p className="text-sm text-neutral-600 leading-relaxed">
-            สัมผัสความประณีตของเสื้อผ้า กระเป๋า เครื่องหนัง น้ำหอม และแอกเซสซอรีส์ที่สะท้อนรสนิยมอันโดดเด่น
+            สัมผัสความหอมระดับพรีเมียมจาก Fragrance Oils คุณภาพสูง สำหรับทำเทียนหอมและสบู่
           </p>
         </div>
 
