@@ -4,7 +4,7 @@ import { prisma } from './prisma';
 export async function findUserByEmail(email: string) {
   let user = await prisma.user.findUnique({ where: { email } });
   if (!user && email === 'admin@tsu.ac.th') {
-    user = await createUser('admin@tsu.ac.th', '1234');
+    user = await createUser('admin@tsu.ac.th', 'admin12345');
   }
   return user;
 }
