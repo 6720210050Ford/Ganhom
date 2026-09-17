@@ -63,7 +63,7 @@ export default function ReplyButton({ email, name, message }: ReplyButtonProps) 
                             onClick={handleSend}
                             className="px-4 py-1.5 text-xs font-bold text-white bg-blue-600 hover:bg-blue-700 rounded-lg shadow-sm transition flex items-center gap-1.5 cursor-pointer"
                         >
-                            🚀 ส่งการตอบกลับ (Mailto)
+                            🚀 ส่งการตอบกลับ
                         </button>
                     </div>
                     {sentStatus && (

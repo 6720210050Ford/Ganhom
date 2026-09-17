@@ -1,0 +1,18 @@
+[
+  {
+    "id": "stf-1",
+    "name": "Admin Worrapon",
+    "email": "admin@tsu.ac.th",
+    "role": "OWNER",
+    "roleLabel": "เจ้าของร้าน (OWNER / SUPERADMIN)",
+    "status": "Active"
+  },
+  {
+    "id": "stf-2",
+    "name": "Worrapon Operations",
+    "email": "worrapon.s@lifestyle.com",
+    "role": "MANAGER",
+    "roleLabel": "ผู้จัดการคำสั่งซื้อ (STORE MANAGER)",
+    "status": "Active"
+  }
+]

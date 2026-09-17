@@ -3,7 +3,7 @@ import Link from 'next/link';
 
 export default function Courses() {
     return (
-        <div className="space-y-6">
+        <div className="max-w-6xl mx-auto px-4 py-8 sm:py-12 space-y-6">
             <div>
                 <div className="inline-flex items-center gap-2 rounded-full bg-blue-50 px-3 py-1 text-xs font-bold text-blue-600 mb-2 border border-blue-100">
                     <span>📚 Course Catalog</span>

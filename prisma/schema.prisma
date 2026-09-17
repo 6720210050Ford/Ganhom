@@ -1,0 +1,40 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+}
+
+model Todo {
+  id        String   @id @default(cuid())
+  title     String   @unique
+  completed Boolean  @default(false)
+  createdAt DateTime @default(now())
+}
+
+model User {
+  id       String @id @default(cuid())
+  email    String @unique
+  password String
+}
+
+model Message {
+  id        String   @id @default(cuid())
+  name      String
+  email     String   @unique
+  message   String
+  tag       String?  // ← เพิ่มตาม Lab Task 1.1
+  authorId  String?
+  createdAt DateTime @default(now())
+}
+
+model Comment {
+  id        String   @id @default(cuid())
+  postId    String
+  author    String
+  text      String
+  reactions Json?    // ← เพิ่มตาม Lab Workshop (Comment Reaction Feature)
+  authorId  String?
+  createdAt DateTime @default(now())
+}

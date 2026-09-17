@@ -1,10 +1,7 @@
 import ContactForm from '@/components/ContactForm';
+import Link from 'next/link';
 import type { Metadata } from 'next';
-import { createMessage, listMessages } from '@/lib/messageService'; 
-  
-export async function GET() { 
-  return Response.json({ messages: listMessages() }); 
-} 
+
 
 export const metadata: Metadata = {
     title: 'ติดต่อเรา',
@@ -13,14 +10,23 @@ export const metadata: Metadata = {
 
 export default function ContactPage() {
     return (
-        <div className="space-y-8">
+        <div className="max-w-5xl mx-auto px-4 py-8 sm:py-12 space-y-8">
             {/* Header */}
-            <div>
-                <div className="inline-flex items-center gap-2 rounded-full bg-blue-50 px-3 py-1 text-xs font-bold text-blue-600 mb-3 border border-blue-100">
-                    <span>📞 Contact Us</span>
+            <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+                <div>
+                    <div className="inline-flex items-center gap-2 rounded-full bg-blue-50 px-3 py-1 text-xs font-bold text-blue-600 mb-3 border border-blue-100">
+                        <span>📞 Contact Us</span>
+                    </div>
+                    <h1 className="text-3xl font-extrabold text-slate-900 tracking-tight">ติดต่อเรา</h1>
+                    <p className="text-sm text-slate-500 mt-1">ส่งข้อความถึงเรา หรือสอบถามข้อมูลเพิ่มเติมได้ที่นี่</p>
                 </div>
-                <h1 className="text-3xl font-extrabold text-slate-900 tracking-tight">ติดต่อเรา</h1>
-                <p className="text-sm text-slate-500 mt-1">ส่งข้อความถึงเรา หรือสอบถามข้อมูลเพิ่มเติมได้ที่นี่</p>
+
+                <Link
+                    href="/contact/my-messages"
+                    className="inline-flex items-center gap-2 rounded-xl bg-slate-900 hover:bg-slate-800 px-4 py-2.5 text-xs font-bold text-white transition shadow-sm self-start sm:self-auto"
+                >
+                    📮 ดูข้อความที่ฉันส่งไว้ →
+                </Link>
             </div>
 
             <div className="grid gap-8 lg:grid-cols-12 items-start">
@@ -78,12 +84,3 @@ export default function ContactPage() {
         </div>
     );
 }
-export async function POST(request: Request) { 
-  const body = await request.json(); 
-  try { 
-    const saved = createMessage(body); 
-    return Response.json({ ok: true, item: saved }, { status: 201 }); 
-  } catch (err) { 
-    return Response.json({ error: (err as Error).message }, { status: 400 }); 
-  } 
-} 

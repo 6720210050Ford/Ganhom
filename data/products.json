@@ -1,0 +1,81 @@
+[
+  {
+    "id": "PROD-1004",
+    "title": "แว่นตากันแดด Vintage Round Sunglasses",
+    "description": "แว่นตากันแดดทรงกลมวินเทจ กรอบไทเทเนียมน้ำหนักเบา เลนส์โพลาไรซ์ UV400 ป้องกันแสงสะท้อนและถนอมสายตาอย่างเหนือชั้น ดีไซน์เข้ากับทุกรูปหน้า",
+    "media": [
+      "https://images.unsplash.com/photo-1511499767150-a48a237f0083?w=800&auto=format&fit=crop&q=80"
+    ],
+    "category": "เครื่องประดับ & แว่นตา",
+    "price": 3890,
+    "compareAtPrice": 4500,
+    "costPerItem": 1500,
+    "chargeTax": true,
+    "trackQuantity": true,
+    "quantity": 18,
+    "sku": "ACC-SUN-004",
+    "barcode": "8850123456792",
+    "continueSellingWhenOutOfStock": false,
+    "requiresShipping": true,
+    "weight": 0.25,
+    "packageSize": "กล่องตัวอย่าง - 18 x 8 x 6 cm",
+    "status": "active",
+    "productType": "แว่นตากันแดด",
+    "vendor": "CHANEL Lifestyle",
+    "collections": [
+      "Accessories",
+      "Summer 2026"
+    ],
+    "tags": [
+      "sunglasses",
+      "vintage",
+      "eyewear"
+    ],
+    "themeTemplate": "สินค้าเริ่มต้น",
+    "seoTitle": "แว่นตากันแดด Vintage Round Sunglasses",
+    "seoDescription": "แว่นตากันแดดทรงกลมวินเทจ เลนส์โพลาไรซ์ UV400 ถนอมสายตา",
+    "handle": "vintage-round-sunglasses",
+    "createdAt": "2026-09-09T14:00:00.000Z",
+    "updatedAt": "2026-09-10T09:00:00.000Z"
+  },
+  {
+    "id": "PROD-1005",
+    "title": "รองเท้าสนีกเกอร์ Minimalist Leather Sneakers",
+    "description": "สนีกเกอร์หนังแท้สีขาว ดีไซน์เรียบเท่ ทันสมัย พื้นยางกันลื่น OrthoLite ซัพพอร์ตเท้า นุ่มสบายทุกก้าวเดิน เหมาะสำหรับชีวิตประจำวัน",
+    "media": [
+      "https://images.unsplash.com/photo-1595950653106-6c9ebd614d3a?w=800&auto=format&fit=crop&q=80"
+    ],
+    "category": "รองเท้า & สนีกเกอร์",
+    "price": 5400,
+    "compareAtPrice": 6500,
+    "costPerItem": 2400,
+    "chargeTax": true,
+    "trackQuantity": true,
+    "quantity": 30,
+    "sku": "SH-SNK-005",
+    "barcode": "8850123456793",
+    "continueSellingWhenOutOfStock": false,
+    "requiresShipping": true,
+    "weight": 1.1,
+    "packageSize": "กล่องตัวอย่าง - 32 x 22 x 12 cm",
+    "status": "active",
+    "productType": "รองเท้าสนีกเกอร์",
+    "vendor": "Urban Lifestyle",
+    "collections": [
+      "Footwear",
+      "New Arrivals"
+    ],
+    "tags": [
+      "sneakers",
+      "white",
+      "shoes",
+      "leather"
+    ],
+    "themeTemplate": "สินค้าเริ่มต้น",
+    "seoTitle": "รองเท้าสนีกเกอร์ Minimalist Leather Sneakers",
+    "seoDescription": "สนีกเกอร์หนังแท้สไตล์มินิมอล พื้นนุ่มซัพพอร์ตเท้าตลอดวัน",
+    "handle": "minimalist-leather-sneakers",
+    "createdAt": "2026-09-09T16:00:00.000Z",
+    "updatedAt": "2026-09-10T09:15:00.000Z"
+  }
+]

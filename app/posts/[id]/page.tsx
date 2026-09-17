@@ -1,9 +1,10 @@
 import PostButton from '@/components/postbutton';
+import CommentSection from '@/components/CommentSection';
 import Link from 'next/link';
 import type { Metadata, ResolvingMetadata } from 'next';
 
 type Props = {
-    params: { id: string };
+    params: Promise<{ id: string }>;
 };
 type Post = {
     id: number;
@@ -15,8 +16,9 @@ export async function generateMetadata(
     { params }: Props,
     parent: ResolvingMetadata
 ): Promise<Metadata> {
+    const { id } = await params;
     const res = await fetch(
-        `https://jsonplaceholder.typicode.com/posts/${params.id}`
+        `https://jsonplaceholder.typicode.com/posts/${id}`
     );
     const post = await res.json();
     return {
@@ -25,15 +27,15 @@ export async function generateMetadata(
     };
 }
 export default async function PostDetail({ params }: Props) {
-    
+    const { id } = await params;
     const res = await fetch(
-        `https://jsonplaceholder.typicode.com/posts/${params.id}`,
+        `https://jsonplaceholder.typicode.com/posts/${id}`,
         { cache: 'no-store' }
     );
     if (!res.ok) {
         return (
             <div className="p-8 text-center">
-                <h1 className="text-xl font-bold text-red-500 mb-2">ไม่พบบทความ #{params.id}</h1>
+                <h1 className="text-xl font-bold text-red-500 mb-2">ไม่พบบทความ #{id}</h1>
                 <Link href="/posts" className="text-sm font-bold text-blue-600 hover:underline">
                     ← ย้อนกลับไปหน้าบทความ
                 </Link>
@@ -42,7 +44,7 @@ export default async function PostDetail({ params }: Props) {
     }
     const post: Post = await res.json();
     return (
-        <div className="max-w-3xl mx-auto space-y-6">
+        <div className="max-w-3xl mx-auto px-4 py-8 sm:py-12 space-y-6">
             <Link
                 href="/posts"
                 className="inline-flex items-center gap-1.5 text-xs font-bold text-slate-500 hover:text-blue-600 transition-colors"
@@ -69,6 +71,9 @@ export default async function PostDetail({ params }: Props) {
                     <span className="text-xs text-slate-400 font-medium">ชอบบทความนี้ไหม?</span>
                     <PostButton />
                 </div>
+
+                {/* ส่วนแสดงและเขียนความคิดเห็น (CommentSection) */}
+                <CommentSection postId={id} />
             </div>
         </div>
     );

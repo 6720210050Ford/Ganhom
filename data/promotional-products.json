@@ -1,0 +1,170 @@
+[
+  {
+    "id": "new",
+    "name": "สินค้าใหม่",
+    "featured": {
+      "brand": "REDMI",
+      "model": "Note ",
+      "modelHighlight": "17",
+      "modelSuffix": " Pro Max",
+      "badge": "5G",
+      "tagline": "แบตแกร่งเต็ม MAX",
+      "specs": [
+        "แบตเตอรี่ 10000mAh พร้อมไฮเปอร์ชาร์จ 100W",
+        "ทนน้ำลึก 2 เมตร นาน 72 ชั่วโมง"
+      ],
+      "price": "฿17,990.00",
+      "originalPrice": "฿21,599.00",
+      "hasFromPrefix": true,
+      "btnText": "เรียนรู้เพิ่มเติม",
+      "btnHref": "/blog-spa?source=products",
+      "imageCrop": {
+        "sx": 4.1,
+        "sy": 22,
+        "sWidth": 43.3,
+        "sHeight": 35.8
+      },
+      "customImageUrl": "https://www.latifperfumes.com/_next/static/media/agarwoodfront.86510e2b.jpg"
+    },
+    "items": [
+      {
+        "id": "redmi-17-5g",
+        "name": "REDMI Note 17 5G",
+        "price": "฿11,999.00",
+        "originalPrice": "฿14,399.00",
+        "hasFromPrefix": true,
+        "imageCrop": {
+          "sx": 10,
+          "sy": 63.5,
+          "sWidth": 9,
+          "sHeight": 14.5
+        },
+        "linkHref": "/blog-spa?source=products",
+        "customImageUrl": "/uploads/slide_1788979027460_agarwood-removebg-pr.png"
+      },
+      {
+        "id": "redmi-watch-6-lite",
+        "name": "REDMI Watch 6 Lite",
+        "price": "฿1,999.00",
+        "originalPrice": "฿2,990.00",
+        "hasFromPrefix": false,
+        "imageCrop": {
+          "sx": 32,
+          "sy": 63.5,
+          "sWidth": 9.5,
+          "sHeight": 14.5
+        },
+        "linkHref": "/blog-spa?source=products",
+        "customImageUrl": "https://www.central.co.th/e-shopping/wp-content/uploads/2020/12/TOM-FORD-BEAUTY-OUD.jpg"
+      },
+      {
+        "id": "poco-f9-ultra",
+        "name": "POCO F9 Ultra",
+        "price": "฿29,990.00",
+        "originalPrice": "฿31,990.00",
+        "hasFromPrefix": true,
+        "imageCrop": {
+          "sx": 54.8,
+          "sy": 63.5,
+          "sWidth": 9,
+          "sHeight": 14.5
+        },
+        "linkHref": "/blog-spa?source=products"
+      },
+      {
+        "id": "poco-f9-pro",
+        "name": "POCO F9 Pro",
+        "price": "฿25,990.00",
+        "originalPrice": "฿27,990.00",
+        "hasFromPrefix": true,
+        "imageCrop": {
+          "sx": 76.8,
+          "sy": 63.5,
+          "sWidth": 9,
+          "sHeight": 14.5
+        },
+        "linkHref": "/blog-spa?source=products"
+      }
+    ]
+  },
+  {
+    "id": "lifestyle",
+    "name": "ตอบโจทย์ทุกไลฟ์สไตล์",
+    "featured": {
+      "brand": "XIAOMI",
+      "model": "Buds 5 Pro",
+      "badge": "Hi-Res",
+      "tagline": "มิติเสียงคมชัด ตัดเสียงรบกวนขั้นสุด",
+      "specs": [
+        "ระบบตัดเสียงรบกวนอัจฉริยะแบบ Hybrid Active Noise Cancellation",
+        "แบตเตอรี่ใช้งานต่อเนื่องสูงสุดถึง 38 ชั่วโมง"
+      ],
+      "price": "฿3,990.00",
+      "originalPrice": "฿4,990.00",
+      "hasFromPrefix": false,
+      "btnText": "เรียนรู้เพิ่มเติม",
+      "btnHref": "/blog-spa?source=products",
+      "imageCrop": {
+        "sx": 4.1,
+        "sy": 22,
+        "sWidth": 43.3,
+        "sHeight": 35.8
+      }
+    },
+    "items": [
+      {
+        "id": "smart-band-9",
+        "name": "Xiaomi Smart Band 9",
+        "price": "฿1,490.00",
+        "originalPrice": "฿1,990.00",
+        "imageCrop": {
+          "sx": 32,
+          "sy": 63.5,
+          "sWidth": 9.5,
+          "sHeight": 14.5
+        },
+        "linkHref": "/blog-spa?source=products"
+      },
+      {
+        "id": "sound-pocket",
+        "name": "Xiaomi Sound Pocket",
+        "price": "฿699.00",
+        "originalPrice": "฿990.00",
+        "imageCrop": {
+          "sx": 10,
+          "sy": 63.5,
+          "sWidth": 9,
+          "sHeight": 14.5
+        },
+        "linkHref": "/blog-spa?source=products"
+      },
+      {
+        "id": "scooter-4-pro",
+        "name": "Electric Scooter 4 Pro",
+        "price": "฿18,990.00",
+        "originalPrice": "฿22,990.00",
+        "hasFromPrefix": true,
+        "imageCrop": {
+          "sx": 54.8,
+          "sy": 63.5,
+          "sWidth": 9,
+          "sHeight": 14.5
+        },
+        "linkHref": "/blog-spa?source=products"
+      },
+      {
+        "id": "action-cam",
+        "name": "Xiaomi Action Cam 4K",
+        "price": "฿4,590.00",
+        "originalPrice": "฿5,990.00",
+        "imageCrop": {
+          "sx": 76.8,
+          "sy": 63.5,
+          "sWidth": 9,
+          "sHeight": 14.5
+        },
+        "linkHref": "/blog-spa?source=products"
+      }
+    ]
+  }
+]

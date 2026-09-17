@@ -9,21 +9,22 @@ const courseData: Record<string, CourseDetail> = {
     '0214321': { name: 'Web App Design & Dev', desc: 'Next.js + React + DB', instructor: 'อ.สิรินดา' },
     '0214101': { name: 'Programming Fundamentals', desc: 'C/C++ พื้นฐาน', instructor: 'อ.ประจํา' },
 };
-// ✨ TypeScript: กําหนด type ให้params
-export default function CourseDetail(
-    { params }: { params: { id: string } }
+// ✨ TypeScript: กําหนด type ให้params เป็น Promise ใน Next.js 15
+export default async function CourseDetail(
+    { params }: { params: Promise<{ id: string }> }
 ) {
-    const course = courseData[params.id];
+    const { id } = await params;
+    const course = courseData[id];
     if (!course) {
         return (
             <main className="p-12">
-                <h1 className="text-red-500">ไม่พบรายวิชา {params.id}</h1>
+                <h1 className="text-red-500">ไม่พบรายวิชา {id}</h1>
             </main>
         );
     }
     return (
         <main className="p-12">
-            <p className="text-gray-500 mb-2">รหัสวิชา: {params.id}</p>
+            <p className="text-gray-500 mb-2">รหัสวิชา: {id}</p>
             <h1 className="text-3xl font-bold text-blue-900">{course.name}</h1>
             <p className="mt-4 text-gray-700">{course.desc}</p>
             <p className="mt-2 text-gray-500">ผู้สอน: {course.instructor}</p>

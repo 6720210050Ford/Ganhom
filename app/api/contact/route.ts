@@ -1,27 +1,16 @@
-import { NextResponse } from 'next/server';
 import { createMessage, listMessages } from '@/lib/messageService';
+import { withErrorHandling } from '@/lib/withErrorHandling';
 
-export async function GET(request: Request) {
+export const GET = withErrorHandling(async (request: Request) => {
   const url = new URL(request.url);
-  const search = url.searchParams.get('search') ?? '';
+  const search = url.searchParams.get('search') ?? undefined;
 
-  const all = listMessages();
-  const filtered = search
-    ? all.filter((m) => m.name.includes(search) || m.message.includes(search))
-    : all;
+  const messages = await listMessages(search);
+  return Response.json({ messages });
+});
 
-  return NextResponse.json({ messages: filtered });
-}
-
-export async function POST(request: Request) {
+export const POST = withErrorHandling(async (request: Request) => {
   const body = await request.json();
-  try {
-    const item = createMessage(body);
-    return NextResponse.json({ ok: true, item }, { status: 201 });
-  } catch (error) {
-    return NextResponse.json(
-      { error: error instanceof Error ? error.message : 'ข้อมูลไม่ถูกต้อง โปรดตรวจสอบให้ครบถ้วน' },
-      { status: 400 }
-    );
-  }
-} 
+  const saved = await createMessage(body);
+  return Response.json({ ok: true, item: saved }, { status: 201 });
+});

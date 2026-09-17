@@ -36,7 +36,7 @@ export default function BlogSpaPage() {
     }
 
     return (
-        <div className="space-y-6">
+        <div className="max-w-6xl mx-auto px-4 py-8 sm:py-12 space-y-6">
             {/* Header */}
             <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4 border-b border-slate-100 pb-5">
                 <div>

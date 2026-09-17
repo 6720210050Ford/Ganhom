@@ -1,0 +1,35 @@
+[
+  {
+    "id": "dsc-1",
+    "code": "WELCOME10",
+    "type": "percentage",
+    "discountValue": 10,
+    "description": "ลด 10% สำหรับคำสั่งซื้อแรก สมาชิกใหม่",
+    "minSpend": 0,
+    "usageLimit": 100,
+    "usedCount": 48,
+    "active": true
+  },
+  {
+    "id": "dsc-2",
+    "code": "LIFESTYLE500",
+    "type": "fixed",
+    "discountValue": 500,
+    "description": "ลด ฿500 ทันที เมื่อมียอดสั่งซื้อครบ ฿5,000",
+    "minSpend": 5000,
+    "usageLimit": 50,
+    "usedCount": 24,
+    "active": true
+  },
+  {
+    "id": "dsc-3",
+    "code": "FREESHIP",
+    "type": "shipping",
+    "discountValue": 0,
+    "description": "ส่งฟรีทั่วไทย ไม่มีขั้นต่ำ",
+    "minSpend": 0,
+    "usageLimit": 500,
+    "usedCount": 112,
+    "active": true
+  }
+]
