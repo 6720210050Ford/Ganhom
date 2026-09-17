@@ -1,5 +1,7 @@
+import PostButton from '@/components/postbutton';
+import Link from 'next/link';
 import type { Metadata, ResolvingMetadata } from 'next';
-// ✨ TypeScript: กําหนด type ให้generateMetadata ด้วย PageProps
+
 type Props = {
     params: { id: string };
 };
@@ -19,7 +21,7 @@ export async function generateMetadata(
     const post = await res.json();
     return {
         title: post.title,
-        description: post.body.slice(0, 160),
+        description: post.body ? post.body.slice(0, 160) : 'รายละเอียดบทความ',
     };
 }
 export default async function PostDetail({ params }: Props) {
@@ -30,17 +32,44 @@ export default async function PostDetail({ params }: Props) {
     );
     if (!res.ok) {
         return (
-            <main className="p-12">
-                <h1 className="text-red-500">ไม่พบบทความ #{params.id}</h1>
-            </main>
+            <div className="p-8 text-center">
+                <h1 className="text-xl font-bold text-red-500 mb-2">ไม่พบบทความ #{params.id}</h1>
+                <Link href="/posts" className="text-sm font-bold text-blue-600 hover:underline">
+                    ← ย้อนกลับไปหน้าบทความ
+                </Link>
+            </div>
         );
     }
     const post: Post = await res.json();
     return (
-        <main className="p-12 max-w-2xl mx-auto">
-            <p className="text-gray-400 text-sm mb-2">บทความ #{post.id}</p>
-            <h1 className="text-3xl font-bold text-blue-900 mb-4">{post.title}</h1>
-            <p className="text-gray-700 leading-relaxed">{post.body}</p>
-        </main>
+        <div className="max-w-3xl mx-auto space-y-6">
+            <Link
+                href="/posts"
+                className="inline-flex items-center gap-1.5 text-xs font-bold text-slate-500 hover:text-blue-600 transition-colors"
+            >
+                ← กลับไปยังบทความทั้งหมด
+            </Link>
+
+            <div className="bg-white rounded-2xl p-6 sm:p-8 border border-slate-200/80 shadow-sm space-y-6">
+                <div>
+                    <span className="inline-block bg-blue-50 text-blue-700 font-bold text-xs px-3 py-1 rounded-full mb-3">
+                        บทความ #{post.id}
+                    </span>
+                    <h1 className="text-2xl sm:text-3xl font-extrabold text-slate-900 leading-tight">
+                        {post.title}
+                    </h1>
+                </div>
+
+                <div className="p-4 bg-slate-50 rounded-xl border border-slate-100 text-slate-700 leading-relaxed text-sm sm:text-base">
+                    {post.body}
+                </div>
+
+                {/* ปุ่มกด Like (PostButton) */}
+                <div className="pt-4 border-t border-slate-100 flex items-center justify-between">
+                    <span className="text-xs text-slate-400 font-medium">ชอบบทความนี้ไหม?</span>
+                    <PostButton />
+                </div>
+            </div>
+        </div>
     );
 }

@@ -19,4 +19,10 @@ export function addMessage(data: Omit<ContactMessage, 'id' | 'createdAt'>) {
 export function getMessages() {
     return messages;
 }
-
+//เพิ่มเติม
+export function updateMessage(id: string, updates: Partial<ContactMessage>) { 
+  const index = messages.findIndex((m) => m.id === id); 
+  if (index === -1) return null; 
+  messages[index] = { ...messages[index], ...updates }; 
+  return messages[index]; 
+} 

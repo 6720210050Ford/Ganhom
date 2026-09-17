@@ -8,13 +8,23 @@ export default function LoginPage() {
     const [error, setError] = useState('');
     async function handleSubmit(e: React.FormEvent) {
         e.preventDefault();
-        const res = await fetch('/api/login', {
-            method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({ email, password }),
-        });
-        if (!res.ok) { setError('เข้าสู่ระบบไม่สําเร็จ'); return; }
-        router.push('/dashboard');
+        setError('');
+        try {
+            const res = await fetch('/api/login', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                credentials: 'same-origin',
+                body: JSON.stringify({ email, password }),
+            });
+            const data = await res.json();
+            if (!res.ok) {
+                setError(data?.error || 'เข้าสู่ระบบไม่สําเร็จ');
+                return;
+            }
+            router.push('/dashboard');
+        } catch (err) {
+            setError('เกิดข้อผิดพลาดในการเชื่อมต่อ โปรดลองใหม่อีกครั้ง');
+        }
     }
 
     return (

@@ -3,6 +3,9 @@ export interface ExternalItem {
     title: string;
     subtitle?: string;
     image?: string;
+    url?: string;
+    price?: number;
+    category?: string;
 }
 export async function fetchExternal(
     source: 'products' | 'news'
@@ -13,8 +16,11 @@ export async function fetchExternal(
             { cache: 'no-store' }
         ).then((r) => r.json());
         return items.map((p: any) => ({
-            id: String(p.id), title: p.title,
+            id: String(p.id),
+            title: p.title,
             subtitle: `$${p.price} • ${p.category}`,
+            price: Number(p.price) || 0,
+            category: p.category,
             image: p.image,
         }));
     }
@@ -23,8 +29,10 @@ export async function fetchExternal(
         'https://hn.algolia.com/api/v1/search?tags=story&hitsPerPage=8'
     ).then((r) => r.json());
     return (data.hits || []).map((h: any) => ({
-        id: String(h.objectID), title: h.title,
+        id: String(h.objectID),
+        title: h.title,
         subtitle: `${h.points ?? 0} points • by ${h.author}`,
-        image: h.url,
+        image: `https://picsum.photos/seed/${h.objectID}/400/250`,
+        url: h.url || `https://news.ycombinator.com/item?id=${h.objectID}`,
     }));
 }
